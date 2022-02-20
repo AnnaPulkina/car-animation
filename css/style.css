@@ -1,0 +1,1749 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap');
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+img {
+    vertical-align: top;
+}
+
+html{
+    max-height: 1200px;
+  
+}
+
+html{
+    font-size: 16px;
+    background-color: rgba(0, 128, 0, 0.61);
+    animation-name: fon;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fon{
+    0%{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 45%, rgba(148,187,233,1) 77%, rgba(238,174,202,1) 85%);
+    }
+    25%{
+    background: rgb(149,219,232);
+    background: radial-gradient(circle, rgba(149,219,232,1) 20%, rgba(196,88,208,1) 100%);
+    }
+    50%{
+    background: rgb(174,233,238);
+    background: linear-gradient(90deg, rgba(174,233,238,1) 0%, rgba(70,152,255,1) 51%);
+    }
+    75%{
+    background: rgb(69,165,173);
+    background: radial-gradient(circle, rgba(69,165,173,1) 0%, rgba(192,140,140,1) 18%, rgba(124,82,129,1) 51%, rgba(114,68,104,1) 59%, rgba(44,32,73,1) 80%);
+    }
+    100%{
+    background: rgb(145,9,83);
+    background: radial-gradient(circle, rgba(145,9,83,1) 0%, rgba(44,32,73,1) 80%, rgba(0,0,0,1) 100%, rgba(115,6,6,1) 100%, rgba(75,37,37,1) 100%, rgba(65,0,73,1) 100%);
+    }
+}
+
+body{
+    height: 100%;
+    line-height: 1;
+    overflow-x: hidden;
+    font-family: 'Sedgwick Ave', cursive;
+}
+
+.wrapper{
+    min-height: 100%;
+}
+
+
+/* ============================================================== */
+/* sun */
+.sun{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255, 196, 0);
+    position: relative;
+    border-radius: 50%;
+    margin: 90px auto 0px auto;
+    position: relative;
+    transform: scale(1);
+    animation-name: sun, sun-night;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    box-shadow: 10px 10px 500px 100px rgb(217, 255, 0);
+}
+
+.sun::before{
+    content: "";
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 230, 0, 0.473);
+    position: absolute;
+    transform: rotate(30deg);
+    box-shadow: 10px 10px 500px 100px rgba(255, 145, 0, 0.438);
+}
+
+.sun::after{
+    content: "";
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 230, 0, 0.459);
+    position: absolute;
+    transform: rotate(-30deg);
+    box-shadow: 10px 10px 100px rgba(251, 255, 0, 0.26);
+}
+
+@keyframes sun{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes sun-night{
+    0%{
+        opacity: 1;
+        transform: scale(0.2);
+    }
+    50%{
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    75%{
+        opacity: 0;
+        transform: scale(2);
+    }
+    100%{
+        opacity: 0.5;
+        background-color: white;
+        transform: scale(0.8);
+    }
+}
+
+
+
+/* =================================================================== */
+.clouds {
+    position: relative;
+}
+
+.cloud-one{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0px 0px 50px 90px white;
+    animation-name: cloudOne;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    opacity: 1;
+    transform: translate(0px, 0px);
+}
+
+.cloud-one::before{
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0px 0px 50px 90px white;
+    position: absolute;
+    top: 50px;
+    left: 150px;
+}
+
+.cloud-one::after{
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0px 0px 50px 90px white;
+    position: absolute;
+    top: 0px;
+    left: 300px;
+}
+
+@keyframes cloudOne{
+0%{
+    opacity: 0.1;
+    transform: translate(-50px, 50px);
+}
+
+25%{
+    opacity: 0.8;
+}
+50%{
+    opacity: 0.4;
+}
+
+100%{
+    opacity: 0.1;
+    transform: translate(2500px, 0px);
+}
+}
+
+.cloud-two{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0px 0px 50px 90px white;
+    animation-name: cloudTwo;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    opacity: 1;
+    transform: translate(900px, 300px);
+}
+
+.cloud-two::before{
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0px 0px 50px 90px white;
+    position: absolute;
+    transform: translate(200px, 10px);
+    
+}
+
+.cloud-two::after{
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0px 0px 50px 90px white;
+    position: absolute;
+   transform: translate(-150px, 40px);
+}
+
+@keyframes cloudTwo{
+0%{
+    opacity: 0.1;
+    transform: translate(2000px, 0px)
+}
+
+25%{
+    opacity: 0.3;
+}
+50%{
+    opacity: 0.2;
+}
+
+100%{
+    opacity: 0.1;
+    transform: translate(-400px, 0px);
+}
+}
+
+/* =========================================================== */
+/* bird */
+.bird {
+    position: relative;
+    top: 0px;
+    left: 500px;
+    z-index: 100;
+    transform: scale(0.4);
+    animation-name: birdsik;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+}
+
+@keyframes birdsik{
+    0%{
+        left: -1000px;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+
+.bird-body {
+    width: 500px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgb(34, 31, 31);
+    z-index: 30;
+}
+
+.bird-body::before{
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    background-color: rgb(34, 31, 31);
+    bottom: 100px;
+    left: -100px;
+    transform: skew(45deg);
+}
+
+.bird-body::after{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(34, 31, 31);
+    bottom: 100px;
+    left: 450px;
+    transform: skew(45deg);
+}
+
+.body-wings {
+    position: absolute;
+    width: 150px;
+    height: 400px;
+    background-color: rgb(34, 31, 31);
+
+    bottom: 40px;
+    left: 150px; 
+    z-index: 31;
+
+    transform-origin3d: top right;
+
+    border-radius: 0% 100% 0% 100% / 0% 100% 0% 100% ;
+
+    transform: rotate(-50deg);
+    animation-name: wings;
+    animation-iteration-count: infinite;
+    animation-duration: 700ms;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    
+}
+
+@keyframes wings{
+    0%{
+        transform: rotate(-50deg);
+        bottom: 40px;
+        left: 150px;
+    }
+    100%{
+        transform: rotate(-60deg);
+        bottom: -50px;
+        left: 150px;
+    }
+}
+
+/* =================================================================== */
+/* car */
+
+.car-block{
+    animation-name: car;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    position: relative;
+    z-index: 50;
+}
+
+.car{
+    margin: 0px 50px;
+}
+
+@keyframes car{
+    0%{
+        transform: translate(-1000px, 0px);
+    }
+    100%{
+        transform: translate(1500px, 0px);
+    }
+}
+
+
+.top {
+    position: relative;
+}
+
+.top__container {
+    background-color: red;
+    width: 300px;
+    height: 200px;
+    position: relative;
+    top: 300px;
+    left: 350px;
+    border-left: none;
+    border: 3px solid #000;
+    z-index: 10;
+}
+
+.container-top__left{
+    background-color: red;
+    position: absolute;
+    z-index: 11;
+    width: 100px;
+    height: 200px;
+    top: 300px;
+    left: 270px;
+    border: 3px solid #000;
+    border-right: none;
+    border-radius: 79% 21% 0% 100% / 100% 0% 100% 0%;
+}
+
+.container-top__right{
+    background-color: red;
+    width: 100px;
+    height: 200px;
+    border: 3px solid #000;
+    transform: skew(15deg);
+    border-radius: 0px 10px 0px 0px;
+    border-left: none;
+    position: absolute;
+    top: 300px;
+    left: 600px;
+    z-index: 11;
+}
+
+
+.top__mirror-right {
+    height: 180px;
+    width: 140px;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    z-index: 12;
+    position: absolute;
+    top: 320px;
+    left: 560px;
+    border: 3px solid #000;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.right-mirror__cut{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    height: 180px;
+    width: 60px;
+    border: 3px solid #000;
+    border-left: none;
+    transform: skew(15deg);
+    position: absolute;
+    top: 320px;
+    left: 670px;
+    z-index: 13;
+}
+
+.top__mirror-left {
+    height: 180px;
+    width: 140px;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    z-index: 12;
+    position: absolute;
+    top: 320px;
+    left: 400px;
+    border: 3px solid #000;
+    border-radius: 0px 5px 0px 0px;
+}
+
+.left-mirror__bowl{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    position: absolute;
+    z-index: 13;
+    height: 180px;
+    width: 140px;
+    top: 320px;
+    left: 340px;
+    border: 3px solid #000;
+    border-right: none;
+    border-radius: 44% 21% 0% 100% / 100% 0% 100% 0%;
+}
+
+
+.rudder__first-element {
+    height: 80px;
+    width: 80px;
+    background: rgb(168, 20, 168);
+    z-index: 14;
+    position: relative;
+    border-radius: 50%;
+    border: 3px solid #000;
+    top: 220px;
+    left: 595px;
+}
+
+.rudder-second-element {
+    height: 80px;
+    width: 70px;
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    z-index: 15;
+    position: relative;
+    border-radius: 50%;
+    border-right: 3px solid #000;
+    top: 140px;
+    left: 590px;
+}
+
+.centr-car__body {
+    background-color: red;
+    position: relative;
+    z-index: 15;
+    height: 170px;
+    width: 650px;
+    border: 3px solid #000;
+    top: 120px;
+    left: 150px;
+    transform: skew(5deg);
+}
+
+.text{
+    position: fixed;
+    z-index: 30;
+    font-size: 30px;
+    text-shadow: 1px 1px 5px rgb(70, 24, 24);
+    top: 15px;
+    left: 20px;
+}
+
+.centr-car__bodies{
+    background-color: red;
+    position: absolute;
+    z-index: 15;
+    height: 170px;
+    width: 100px;
+    border: 3px solid #000;
+    top: -3px;
+    left: 590px;
+    transform: skew(-10deg);
+    border-radius: 0px 20px 0px 0px;
+    border-left: none;
+}
+
+.door__left {
+    background-color: #000;
+    height: 130px;
+    width: 3px;
+    position: relative;
+    top: 20px;
+    left: 337px;
+    transform: skew(-5deg);
+}
+
+.left-door-button {
+    background-color: #000;
+    position: relative;
+    height: 3px;
+    width: 40px;
+    bottom: 105px;
+    left: 280px;
+}
+.door__right {
+    background-color: #000;
+    height: 130px;
+    width: 3px;
+    position: absolute;
+    top: 20px;
+    left: 350px;
+    transform: skew(-5deg);
+}
+
+.right-door__button {
+    background-color: #000;
+    position: relative;
+    height: 3px;
+    width: 40px;
+    bottom: 107px;
+    left: 490px;
+}
+
+.car__lights {
+    position: relative;
+    
+}
+
+.light__left {
+    background: yellow;
+    height: 35px;
+    width: 25px;
+    border: 3px solid #000;
+    border-radius: 100% 0% 67% 33% / 1% 100% 0% 99%;
+    top: -10px;
+    left: 130px;
+    position: absolute;
+    z-index: 12;
+    box-shadow: 1px 1px 150px 80px rgb(221, 221, 19);
+}
+.light__right {
+    background: yellow;
+    height: 100px;
+    width: 50px;
+    border: 3px solid #000;
+    border-radius: 87% 13% 100% 0% / 1% 76% 24% 99% ;
+    top: -20px;
+    left: 818px;
+    position: absolute;
+    z-index: 12;
+    box-shadow: 1px 1px 200px 80px rgb(221, 221, 19);
+}
+
+
+.car__wheels{
+    position: relative;
+    z-index: 16;
+}
+
+.left-wheel__tire {
+    background-color: rgb(36, 33, 33);
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    border: 3px solid #000;
+    top: 20px;
+    left: 220px;
+    position: absolute;
+}
+.left-wheel__disk {
+    background-color: rgb(65, 60, 60);
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 3px solid #000;
+    top: 45px;
+    left: 245px;
+    position: absolute;
+    z-index: 18;
+    animation-name: left-wheel;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+
+.left-wheel__disk::before{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 110px;
+    width: 3px;
+    background-color: black;
+    left: 58px;
+    top: 2px;
+}
+
+@keyframes left-wheel{
+0%{
+    transform: rotate(0deg);
+}
+100%{
+    transform: rotate(360deg);
+}
+}
+
+.left-wheel__disk::after{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 3px;
+    width: 110px;
+    background-color: black;
+    left: 2px;
+    bottom: 58px;
+}
+
+.right-wheel__tire {
+    background-color: rgb(36, 33, 33);
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    border: 3px solid #000;
+    top: 20px;
+    left: 620px;
+    position: absolute;
+}
+.right-wheel__disk {
+    background-color: rgb(65, 60, 60);
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    border: 3px solid #000;
+    top: 45px;
+    left: 645px;
+    position: absolute;
+    z-index: 18;
+    animation-name: right-wheel;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.right-wheel__disk::before{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 110px;
+    width: 3px;
+    background-color: black;
+    left: 58px;
+    top: 2px;
+
+}
+
+.right-wheel__disk::after{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 3px;
+    width: 110px;
+    background-color: black;
+    left: 2px;
+    bottom: 58px;
+}
+
+@keyframes right-wheel{
+0%{
+    transform: rotate(0deg);
+}
+100%{
+    transform: rotate(360deg);
+}
+}
+
+.car__bumper {
+    position: relative;
+}
+
+.bumper-car__left {
+    background: rgb(168, 20, 168);
+    position: absolute;
+    height: 40px;
+    width: 50px;
+    border-radius: 84% 16% 81% 19% / 14% 83% 17% 86%;
+    top: 90px;
+    left: 130px;
+    z-index: 19;
+    border: 3px solid #000;
+    transform: rotate(5deg);
+}
+.bumper-car__right {
+    background: rgb(168, 20, 168);
+    position: absolute;
+    height: 40px;
+    width: 60px;
+    border-radius: 76% 24% 70% 30% / 27% 83% 17% 73% ;
+    top: 90px;
+    left: 800px;
+    z-index: 19;
+    border: 3px solid #000;
+    transform: rotate(5deg);
+}
+
+.shadow {
+    height: 116px;
+    width: 200px;
+    overflow: hidden;
+    position: relative;
+    z-index: 15;
+    top: 2px;
+    left: 205px;
+    
+}
+.shadow__container {
+    background-color: rgb(124, 9, 9);
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 3px solid #000;   
+}
+
+.shadow__right{
+    height: 116px;
+    width: 200px;
+    overflow: hidden;
+    position: relative;
+    z-index: 15;
+    bottom: 114px;
+    left: 605px;
+}
+
+.right-shadow__container{
+    background-color: rgb(124, 9, 9);
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 3px solid #000;   
+}
+
+
+/* =========================================================== */
+/* tree */
+
+.trees {
+    position: relative;
+    animation-name: trees;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes trees{
+    0%{
+        transform: translate(100%);
+    }
+    100%{
+        
+    }
+}
+
+.tree__leaves {
+    width: 300px;
+    height: 400px;
+    border-radius: 48% 52% 70% 30% / 73% 74% 26% 27% ;
+    background-color: green;
+    position: absolute;
+    bottom: 300px;
+    left: 200px;
+    box-shadow: -10px -10px 10px rgba(5, 68, 5, 0.925);
+}
+
+.tree__stem {
+    width: 80px;
+    height: 300px;
+    background-color: brown;
+    position: absolute;
+    bottom: 200px;
+    left: 300px;
+    border-radius: 100px 100px 0px 0px;
+}
+
+/* --------------------------------------------------------- */
+
+.tree-one__leaves{
+    width: 300px;
+    height: 500px;
+    border-radius: 72% 28% 73% 27% / 19% 83% 17% 81% ;
+    background-color: rgb(42, 172, 42);
+    position: absolute;
+    bottom: 300px;
+    left: -850px;
+    box-shadow: -10px -10px 10px rgba(5, 68, 5, 0.925);   
+}
+
+.tree-one__stem{
+    width: 80px;
+    height: 300px;
+    background-color: brown;
+    position: absolute;
+    bottom: 200px;
+    left: -750px;
+    border-radius: 100px 100px 0px 0px;
+}
+
+/* -------------------------------------------------- */
+
+.tree-two__leaves{
+    width: 300px;
+    height: 500px;
+    border-radius: 66% 34% 48% 52% / 36% 58% 42% 64%;
+    background-color: rgb(42, 172, 42);
+    position: absolute;
+    bottom: 300px;
+    left: -50px;
+    box-shadow: -10px -10px 10px rgba(5, 68, 5, 0.925);   
+}
+
+.tree-two__stem{
+    width: 80px;
+    height: 300px;
+    background-color: brown;
+    position: absolute;
+    bottom: 200px;
+    left: 50px;
+    border-radius: 100px 100px 0px 0px;
+}
+
+/* ----------------------------------------- */
+
+.tree-three{
+    position: relative;
+    z-index: 1;
+}
+
+.tree-three__leaves{
+    width: 300px;
+    height: 500px;
+    border-radius: 33% 67% 48% 52% / 42% 64% 36% 58%;
+    background-color: rgb(12, 85, 12);
+    position: absolute;
+    bottom: 300px;
+    left: -300px;
+    box-shadow: -10px -10px 10px rgba(5, 68, 5, 0.925);   
+}
+
+.tree-three__stem{
+    width: 80px;
+    height: 300px;
+    background-color: brown;
+    position: absolute;
+    bottom: 200px;
+    left: -200px;
+    border-radius: 100px 100px 0px 0px;
+}
+
+/* ------------------------------------------------------- */
+
+.tree-four{
+    position: relative;
+    z-index: 1;
+}
+
+.tree-four__leaves{
+    width: 300px;
+    height: 350px;
+    border-radius: 71% 29% 73% 27% / 43% 76% 24% 57% ;
+    background-color: rgb(62, 131, 62);
+    position: absolute;
+    bottom: 300px;
+    left: -550px;
+    box-shadow: -10px -10px 10px rgba(5, 68, 5, 0.925);   
+}
+
+.tree-four__stem{
+    width: 80px;
+    height: 300px;
+    background-color: brown;
+    position: absolute;
+    bottom: 200px;
+    left: -450px;
+    border-radius: 100px 100px 0px 0px;
+}
+
+/* ============================================================ */
+/* home */
+
+.home {
+    position: relative;
+    animation-name: homes;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes homes{
+    0%{
+        transform: translate(100%);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+
+.home__wall {
+    width: 500px;
+    height: 600px;
+    background-color: rgb(255, 198, 158);
+    position: absolute;
+    bottom: 200px;
+    left: 1000px;
+}
+
+.home__window-up {
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+    position: absolute;
+    bottom: 550px;
+    left: 1050px;
+    box-shadow: 0px 0px 100px 10px rgb(255, 255, 0);
+}
+
+.home__window-up::after{
+    content: "";
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+    position: absolute;
+    bottom: 0px;
+    left: 250px;
+    box-shadow: 0px 0px 100px 10px rgba(255, 196, 0, 0.699);
+}
+
+.home__window-down {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(208, 255, 0);
+    position: absolute;
+    bottom: 350px;
+    left: 1050px;
+    box-shadow: 0px 0px 100px 10px rgba(255, 255, 0, 0.555);
+}
+
+.home__door {
+    width: 150px;
+    height: 300px;
+    background-color: rgb(150, 90, 35);
+    position: absolute;
+    bottom: 200px;
+    left: 1300px;
+}
+
+.home__door::before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    background-color: black;
+    bottom: 150px;
+    left: 30px;
+    border-radius: 50%;
+}
+
+/* ---------------------------------------------------------- */
+
+.home-one {
+    position: relative;
+    animation-name: homes-one;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes homes-one{
+    0%{
+        transform: translate(100%);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+
+.home-one__wall {
+    width: 500px;
+    height: 750px;
+    background-color: rgb(245, 210, 185);
+    position: absolute;
+    bottom: 200px;
+    left: 1500px;
+}
+
+.home-one__window-up {
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+    position: absolute;
+    bottom: 700px;
+    left: 1550px;
+    box-shadow: 0px 0px 100px 10px rgb(255, 255, 0);
+}
+
+.home-one__window-up::after{
+    content: "";
+    width: 150px;
+    height: 150px;
+    background-color: rgb(241, 202, 26);
+    position: absolute;
+    bottom: 0px;
+    left: 250px;
+    box-shadow: 0px 0px 100px 10px rgba(255, 196, 0, 0.699);
+}
+
+.home-one__window-down {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(250, 186, 112);
+    position: absolute;
+    bottom: 400px;
+    left: 1550px;
+    box-shadow: 0px 0px 100px 10px rgba(255, 255, 0, 0.5);
+}
+
+.home-one__door {
+    width: 150px;
+    height: 300px;
+    background-color: rgb(231, 172, 116);
+    position: absolute;
+    bottom: 200px;
+    left: 1800px;
+}
+
+.home-one__door::before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    background-color: black;
+    bottom: 150px;
+    left: 30px;
+    border-radius: 50%;
+}
+
+/* ------------------------------------------------------ */
+
+.home-two {
+    position: relative;
+    animation-name: homes-two;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes homes-two{
+    0%{
+        transform: translate(100%);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+
+.home-two__wall {
+    width: 500px;
+    height: 650px;
+    background-color: rgb(221, 197, 180);
+    position: absolute;
+    bottom: 200px;
+    left: 2000px;
+}
+
+.home-two__window-up {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(245, 222, 14);
+    position: absolute;
+    bottom: 650px;
+    left: 2050px;
+    box-shadow: 0px 0px 100px 10px rgb(255, 255, 0);
+}
+
+.home-two__window-up::after{
+    content: "";
+    width: 150px;
+    height: 150px;
+    background-color: rgb(255, 156, 89);
+    position: absolute;
+    bottom: 0px;
+    left: 250px;
+    box-shadow: 0px 0px 100px 10px rgba(255, 196, 0, 0.699);
+}
+
+.home-two__window-down {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(208, 255, 0);
+    position: absolute;
+    bottom: 400px;
+    left: 2050px;
+    box-shadow: 0px 0px 100px 10px rgba(255, 255, 0, 0.555);
+}
+
+.home-two__door {
+    width: 150px;
+    height: 300px;
+    background-color: rgb(184, 129, 78);
+    position: absolute;
+    bottom: 200px;
+    left: 2300px;
+}
+
+.home-two__door::before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    background-color: black;
+    bottom: 150px;
+    left: 30px;
+    border-radius: 50%;
+}
+
+/* ---------------------------------------------------..... */
+.home-three {
+    position: relative;
+    animation-name: homes-three;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes homes-three{
+    0%{
+        transform: translate(100%);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+
+.home-three__wall {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(226, 142, 81);
+    position: absolute;
+    bottom: 200px;
+    left: 500px;
+}
+
+.home-three__window-up {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(255, 234, 42);
+    position: absolute;
+    bottom: 500px;
+    left: 550px;
+    box-shadow: 0px 0px 100px 10px rgb(255, 255, 0);
+}
+
+.home-three__window-up::after{
+    content: "";
+    width: 150px;
+    height: 150px;
+    background-color: rgb(217, 255, 46);
+    position: absolute;
+    bottom: 0px;
+    left: 250px;
+    box-shadow: 0px 0px 100px 10px rgba(255, 196, 0, 0.699);
+}
+
+.home-three__window-down {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(208, 255, 0);
+    position: absolute;
+    bottom: 330px;
+    left: 550px;
+    box-shadow: 0px 0px 100px 10px rgba(255, 255, 0, 0.555);
+}
+
+.home-three__door {
+    width: 150px;
+    height: 250px;
+    background-color: rgb(131, 70, 14);
+    position: absolute;
+    bottom: 200px;
+    left: 800px;
+}
+
+.home-three__door::before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    background-color: black;
+    bottom: 125px;
+    left: 30px;
+    border-radius: 50%;
+}
+
+
+/* ==================================================================== */
+/* road */
+
+.road{
+    width: 100%;
+    height: 300px;
+    background: rgb(69,44,44);
+    background: linear-gradient(90deg, rgba(69,44,44,1) 11%, rgba(78,55,55,1) 62%, rgba(68,8,8,1) 100%);
+    transform: translate(0px, -200px);
+    position: relative;
+    z-index: 0;
+}
+
+
+/* ================================================================= */
+/* grass */
+
+.grass-block{
+    animation-name: grasses;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: relative;
+    z-index: 100;
+}
+
+@keyframes grasses{
+    0%{
+        transform: translate(100%);
+    }
+    80%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+
+.grass{
+    width: 250px;
+    height: 250px;
+    background-color: green;
+    position: relative;
+    z-index: 100;
+    margin: -400px 1px 0px 0px;
+    transform: translate(-10px, 0px);
+    transform: rotate(360deg);
+    animation-name: grass;
+    top: 70px;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes grass{
+0%{
+    transform: rotate(0deg);
+}
+100%{
+    transform: rotate(360deg);
+}
+}
+
+.grass::after{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(67, 204, 40, 0.74);
+    position: absolute;
+    z-index: 100;
+    transform: rotate(20deg);   
+    content: "";
+    margin: -325px px 0px 0px;
+}
+
+.grass::before{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(57, 143, 40, 0.74);
+    position: absolute;
+    z-index: 100;
+    transform: rotate(-30deg);   
+    content: "";
+    margin: -325px px 0px 0px;
+}
+
+/* --------------------------------------------------- */
+
+.grass-one {
+    width: 250px;
+    height: 250px;
+    background-color: green;
+    position: relative;
+    z-index: 99;
+    margin: -400px 1px 0px 0px;
+    transform: rotate(60deg);
+    bottom: -180px;
+    left: 200px;
+    transform: rotate(360deg);
+    animation-name: grass-one;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes grass-one{
+0%{
+    transform: rotate(360deg);
+}
+100%{
+    transform: rotate(0deg);
+}
+}
+
+.grass-one::after{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(67, 204, 40, 0.74);
+    position: absolute;
+    z-index: 100;
+    transform: rotate(20deg);   
+    content: "";
+    margin: -325px px 0px 0px;
+}
+
+.grass-one::before{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(57, 143, 40, 0.74);
+    position: absolute;
+    z-index: 100;
+    transform: rotate(-30deg);   
+    content: "";
+    margin: -325px px 0px 0px;
+}
+
+/* ----------------------------------------------- */
+.grass-two {
+    width: 250px;
+    height: 250px;
+    background-color: green;
+    position: relative;
+    z-index: 99;
+    margin: -400px 1px 0px 0px;
+    transform: rotate(60deg);
+    bottom: -330px;
+    left: 450px;
+    transform: rotate(360deg);
+    animation-name: grass-two;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes grass-two{
+0%{
+    transform: rotate(360deg);
+}
+100%{
+    transform: rotate(0deg);
+}
+}
+
+.grass-two::after{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(67, 204, 40, 0.74);
+    position: absolute;
+    z-index: 100;
+    transform: rotate(20deg);   
+    content: "";
+    margin: -325px px 0px 0px;
+}
+
+.grass-two::before{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(57, 143, 40, 0.74);
+    position: absolute;
+    z-index: 100;
+    transform: rotate(-30deg);   
+    content: "";
+    margin: -325px px 0px 0px;
+}
+
+/* ----------------------------------------------------- */
+
+.grass-three {
+    width: 250px;
+    height: 250px;
+    background-color: green;
+    position: relative;
+    z-index: 99;
+    margin: -400px 1px 0px 0px;
+    transform: rotate(60deg);
+    top: 450px;
+    left: 700px;
+    transform: rotate(360deg);
+    animation-name: grass-three;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes grass-three{
+0%{
+    transform: rotate(360deg);
+}
+100%{
+    transform: rotate(0deg);
+}
+}
+
+.grass-three::after{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(67, 204, 40, 0.74);
+    position: absolute;
+    z-index: 100;
+    transform: rotate(20deg);   
+    content: "";
+    margin: -325px px 0px 0px;
+}
+
+.grass-three::before{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(57, 143, 40, 0.74);
+    position: absolute;
+    z-index: 100;
+    transform: rotate(-30deg);   
+    content: "";
+    margin: -325px px 0px 0px;
+}
+
+/* ---------------------------------------------- */
+.grass-four {
+    width: 250px;
+    height: 250px;
+    background-color: green;
+    position: relative;
+    z-index: 98;
+    margin: -400px 1px 0px 0px;
+    transform: rotate(60deg);
+    top: 600px;
+    left: 950px;
+    transform: rotate(360deg);
+    animation-name: grass-four;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes grass-four{
+0%{
+    transform: rotate(360deg);
+}
+100%{
+    transform: rotate(0deg);
+}
+}
+
+.grass-four::after{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(67, 204, 40, 0.74);
+    position: absolute;
+    z-index: 100;
+    transform: rotate(20deg);   
+    content: "";
+    margin: -325px px 0px 0px;
+}
+
+.grass-four::before{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(57, 143, 40, 0.74);
+    position: absolute;
+    z-index: 100;
+    transform: rotate(-30deg);   
+    content: "";
+    margin: -325px px 0px 0px;
+}
+
+/* --------------------------------------------------------- */
+.grass-five {
+    width: 250px;
+    height: 250px;
+    background-color: green;
+    position: relative;
+    z-index: 98;
+    margin: -400px 1px 0px 0px;
+    transform: rotate(60deg);
+    top: 800px;
+    left: 1150px;
+    transform: rotate(360deg);
+    animation-name: grass-five;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes grass-five{
+0%{
+    transform: rotate(360deg);
+}
+100%{
+    transform: rotate(0deg);
+}
+}
+
+.grass-five::after{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(67, 204, 40, 0.74);
+    position: absolute;
+    z-index: 100;
+    transform: rotate(20deg);   
+    content: "";
+    margin: -325px px 0px 0px;
+}
+
+.grass-five::before{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(57, 143, 40, 0.74);
+    position: absolute;
+    z-index: 100;
+    transform: rotate(-30deg);   
+    content: "";
+    margin: -325px px 0px 0px;
+}
+
+/* -------------------------------------------------- */
+
+.grass-six {
+    width: 250px;
+    height: 250px;
+    background-color: green;
+    position: relative;
+    z-index: 98;
+    margin: -400px 1px 0px 0px;
+    transform: rotate(60deg);
+    top: 1000px;
+    left: 1400px;
+    transform: rotate(360deg);
+    animation-name: grass-six;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes grass-six{
+0%{
+    transform: rotate(360deg);
+}
+100%{
+    transform: rotate(0deg);
+}
+}
+
+.grass-six::after{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(67, 204, 40, 0.74);
+    position: absolute;
+    z-index: 100;
+    transform: rotate(20deg);   
+    content: "";
+    margin: -325px px 0px 0px;
+}
+
+.grass-six::before{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(57, 143, 40, 0.74);
+    position: absolute;
+    z-index: 100;
+    transform: rotate(-30deg);   
+    content: "";
+    margin: -325px px 0px 0px;
+}
+
+/* ---------------------------------------------- */
+
+.grass-seven {
+    width: 250px;
+    height: 250px;
+    background-color: green;
+    position: relative;
+    z-index: 98;
+    margin: -400px 1px 0px 0px;
+    transform: rotate(60deg);
+    top: 1100px;
+    left: 1650px;
+    transform: rotate(360deg);
+    animation-name: grass-seven;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes grass-seven{
+0%{
+    transform: rotate(360deg);
+}
+100%{
+    transform: rotate(0deg);
+}
+}
+
+.grass-seven::after{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(67, 204, 40, 0.74);
+    position: absolute;
+    z-index: 100;
+    transform: rotate(20deg);   
+    content: "";
+    margin: -325px px 0px 0px;
+}
+
+.grass-seven::before{
+    width: 250px;
+    height: 250px;
+    background-color: rgba(57, 143, 40, 0.74);
+    position: absolute;
+    z-index: 100;
+    transform: rotate(-30deg);   
+    content: "";
+    margin: -325px px 0px 0px;
+}
+
+/* =========================================================== */
+/* stones */
+.stones {
+    position: relative;
+    animation-name: stones;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 300;
+}
+
+@keyframes stones{
+    0%{
+        transform: translate(100%);
+    }
+    80%{
+        transform: translate(0);
+    }
+
+    100%{
+        transform: translate(0);
+    }
+}
+
+.stone-one {
+    width: 200px;
+    height: 200px;
+    background: rgb(35, 35, 36);
+    background: linear-gradient(90deg, rgba(69,64,74,1) 0%, rgba(0,0,0,1) 85%, rgb(73, 23, 23) 100%);
+    transform: translate(-1150px, 20px);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.stone-two {
+    width: 300px;
+    height: 200px;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 22%, rgba(51,47,47,1) 67%, rgba(68,8,8,1) 100%);
+    transform: translate(-1350px, -100px);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;  
+    z-index: 50;
+}
+
+.stone-three {
+    width: 300px;
+    height: 400px;
+    background: rgb(51,47,47);
+    background: linear-gradient(90deg, rgba(51,47,47,1) 51%, rgba(0,0,0,1) 85%, rgba(68,8,8,1) 100%);
+    border-radius: 48% 52% 70% 30% / 77% 81% 19% 23% ;
+    transform: translate(-1000px, -550px);
+}
